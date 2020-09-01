@@ -1,0 +1,33 @@
+@import './common/variables.scss';
+
+$component: 'basepage';
+
+.#{$component} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  /*
+  * set the font-size to 62.5% so any other text size could be set using 'rem' unit
+  * https://dev.to/austinnchristensen/css-rem-vs-em-50oo
+  * */
+  font-size: 62.5%;
+  width: 100%;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+      width: 80%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 60%;
+    }
+  }
+}
