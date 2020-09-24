@@ -1,0 +1,32 @@
+@import '../common/variables.scss';
+
+$component: 'footer';
+
+.#{$component} {
+  &__base {
+    background-color: $main-background;
+    min-height: 100px;
+    margin: ($baseline * 2) auto;
+    padding: 0 $gutter;
+  }
+
+  &__list-title {
+    font-size: 1.8rem;
+    margin-top: $baseline;
+  }
+
+  &__list-item {
+    line-height: 2rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: block;
+    color: $text-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

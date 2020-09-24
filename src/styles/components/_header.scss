@@ -1,0 +1,22 @@
+@import '../common/variables.scss';
+
+$component: 'header';
+
+.#{$component} {
+  &__base {
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    line-height: 7rem;
+
+    @media (min-width: $mobile-l) {
+      font-size: 2.8rem;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 3.2rem;
+    }
+  }
+}
