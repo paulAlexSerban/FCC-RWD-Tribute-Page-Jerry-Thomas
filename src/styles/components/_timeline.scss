@@ -1,0 +1,74 @@
+@import '../common/variables.scss';
+
+$component: 'timeline';
+
+.#{$component} {
+	&__base {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			left: 25%;
+			top: 0;
+			content: ' ';
+			display: block;
+			width: 4px;
+			height: 100%;
+			background: $border;
+		}
+	}
+
+	&__block {
+		display: block;
+		height: auto;
+		padding: $baseline 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__date {
+		position: absolute;
+		right: 80%;
+		font-size: 1.4rem;
+	}
+
+	&__section {
+		position: relative;
+		width: 55%;
+		padding-top: $baseline * 2;
+		padding-right: $baseline;
+		padding-left: $gutter;
+		padding-bottom: $baseline * 3;
+		background: $section-background;
+		margin-bottom: $baseline * 2;
+		float: right;
+
+		@media (min-width: $mobile-l) {
+			width: 60%;
+		}
+
+		@media (min-width: $tablet) {
+			width: 65%;
+		}
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 0;
+			position: absolute;
+		}
+	}
+
+	&__headline {
+		font-size: 1.8rem;
+		color: $section-headline;
+		width: 90%;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
+}
+

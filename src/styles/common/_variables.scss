@@ -1,0 +1,14 @@
+@import './_breakpoints.scss';
+@import './mixin/_aspect-ratio.scss';
+
+
+/* GAPS */
+$baseline: 8px;
+$gutter: 32px;
+
+/* Colors */
+$main-background: rgb(247, 247, 247);
+$border: #cedbe4;
+$section-background: #fff;
+$section-headline: #4B878D;
+$text-color: #7f8c97;

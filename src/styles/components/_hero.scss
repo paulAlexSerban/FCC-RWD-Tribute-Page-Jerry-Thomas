@@ -1,0 +1,81 @@
+@import '../common/variables.scss';
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+$component: 'hero';
+
+.#{$component} {
+  &__base,
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__base {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  &__figure {
+    @include aspect-ratio(16, 9, 'hero__image');
+    width: 100%;
+    display: none;
+  }
+
+  &__image {
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__caption {
+    text-align: center;
+    font-size: 1.9rem;
+    position: absolute;
+    bottom: 0;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+  }
+
+  &__previous,
+  &__next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.300);
+
+    &:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__previous {
+    left: 0;
+  }
+
+  &__fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+}

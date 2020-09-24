@@ -1,0 +1,15 @@
+@import '../common/variables.scss';
+
+$component: 'main';
+
+.#{$component} {
+  &__base {
+    background-color: $main-background;
+    color: $text-color;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+    position: relative;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../common/variables.scss';
+
+$component: 'article';
+
+.#{$component}  {
+  &__base {
+    background-color: whitesmoke;
+    color: #7f8c97;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 $baseline;
+  }
+
+  &__title {
+    color: #4e4e4e;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: $baseline;
+  }
+}
